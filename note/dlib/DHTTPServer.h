@@ -1,0 +1,44 @@
+#ifndef DHTTPSERVER_H
+#define DHTTPSERVER_H
+
+#include "DObject.h"
+#include <string>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <netdb.h>
+
+using std::string;
+
+namespace DLib
+{
+
+typedef struct sockaddr socketAddrStru;
+typedef socketAddrStru* socketAddrStruPointer;
+enum HTTPMethod
+{
+    POST,GET,PUT
+};
+
+class DHTTPServer : public DObject<>
+{
+private:
+    socketAddrStru m_addr;
+    int listenSocketFd;
+
+
+
+
+
+
+public:
+
+};
+
+
+}
+
+
+
+
+
+#endif // DHTTPSERVER_H

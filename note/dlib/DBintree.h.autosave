@@ -1,0 +1,18 @@
+#ifndef DBINTREE_H
+#define DBINTREE_H
+
+#include "DException.h"
+#include "DObject.h"
+#include "DSingleLinkList.h"
+#include "Config.h"
+
+
+namespace DLib
+{
+
+
+
+}
+
+
+#endif // DBINTREE_H

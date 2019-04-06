@@ -1,0 +1,121 @@
+#include "Widget.h"
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+
+Widget::Widget(QWidget *parent): QWidget(parent), testBtn1(this),
+      testBtn2(this), testBtn3(this), testBtn4(this)
+{
+  //testVBoxLayout();
+  //testHBoxLayout();
+  testVHBoxLayout();
+}
+
+void Widget::testVBoxLayout(){
+  QHBoxLayout* hlayout1 = new QHBoxLayout;
+  QHBoxLayout* hlayout2 = new QHBoxLayout;
+  QVBoxLayout* vlayout = new QVBoxLayout;
+
+  testBtn1.setText("test button 1");
+  testBtn1.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+  testBtn2.setText("test button 2");
+  testBtn2.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+  testBtn3.setText("test button 3");
+  testBtn3.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn3.setMinimumSize(160, 30);
+  testBtn4.setText("test button 4");
+  testBtn4.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn4.setMinimumSize(160, 30);
+
+  hlayout1->setSpacing(10);
+  hlayout1->addWidget(&testBtn1);
+  hlayout1->addWidget(&testBtn2);
+  
+  hlayout2->setSpacing(10);
+  hlayout2->addWidget(&testBtn3);
+  hlayout2->addWidget(&testBtn4);
+  
+  vlayout->setSpacing(10);
+  vlayout->addLayout(hlayout1);
+  vlayout->addLayout(hlayout2);
+  vlayout->setStretchFactor(hlayout1, 1);
+  vlayout->setStretchFactor(hlayout2, 3);
+
+  setLayout(vlayout);
+}
+
+void Widget::testHBoxLayout(){
+  QHBoxLayout* layout = new QHBoxLayout;
+
+  testBtn1.setText("test button 1");
+  testBtn1.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+  testBtn2.setText("test button 2");
+  testBtn2.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+  testBtn3.setText("test button 3");
+  testBtn3.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn3.setMinimumSize(160, 30);
+  testBtn4.setText("test button 4");
+  testBtn4.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn4.setMinimumSize(160, 30);  testBtn1.setText("test button 1");
+  testBtn1.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+
+  testBtn2.setText("test button 2");
+  testBtn2.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+
+  testBtn3.setText("test button 3");
+  testBtn3.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn3.setMinimumSize(160, 30);
+  testBtn4.setText("test button 4");
+  testBtn4.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn4.setMinimumSize(160, 30);
+
+  layout->setSpacing(30);
+  layout->addWidget(&testBtn1);
+  layout->addWidget(&testBtn2);
+  layout->addWidget(&testBtn3);
+  layout->addWidget(&testBtn4);
+
+  layout->setStretchFactor(&testBtn1, 1);
+  layout->setStretchFactor(&testBtn2, 2);
+  layout->setStretchFactor(&testBtn3, 1);
+  layout->setStretchFactor(&testBtn4, 3);
+
+  setLayout(layout);
+}
+
+void Widget::testVHBoxLayout(){
+  QVBoxLayout* layout = new QVBoxLayout;
+
+  testBtn1.setText("test button 1");
+  testBtn1.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+  testBtn2.setText("test button 2");
+  testBtn2.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn1.setMinimumSize(160, 30);
+  testBtn3.setText("test button 3");
+  testBtn3.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn3.setMinimumSize(160, 30);
+  testBtn4.setText("test button 4");
+  testBtn4.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+  testBtn4.setMinimumSize(160, 30);
+
+  layout->setSpacing(30);
+  layout->addWidget(&testBtn1);
+  layout->addWidget(&testBtn2);
+  layout->addWidget(&testBtn3);
+  layout->addWidget(&testBtn4);
+
+  layout->setStretch(0, 1);
+  layout->setStretch(1, 1);
+  layout->setStretch(2, 2);
+  layout->setStretch(3, 2);
+
+  setLayout(layout);
+}
+
+Widget::~Widget(){}
