@@ -18,3 +18,11 @@ __C++中凡处于同一个access section的数据，必定保证以其声明顺�
 
 
 __base classes 和 derived classes 的 data members的布局也未有谁先谁后的强制规定。__
+
+
+
+__组合，而非继承，才是把C和C++ 结合在一起的唯一可行的方法。__
+
+
+
+__原则上，被指定的object的真实类型在每一个特定执行点之前，是无法解析的。在C++中，只有通过pointer和reference的操作才能够完成。__
