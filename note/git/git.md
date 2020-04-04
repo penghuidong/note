@@ -15,3 +15,21 @@
 ##### 1. git add
 
 ​		工作区修改的文件被执行git add时， stage
+
+
+
+### 小甲鱼教程
+
+#### 1. git记录的是什么
+
+__git将每个版本独立保存__
+
+
+
+
+
+#### git管理的文件有三种状态
+
+* 已修改 modified 
+* 已暂存 staged
+* 已提交 committed
